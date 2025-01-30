@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Reconnaissance d'Objets</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Reconnaissance d'Objets avec YOLO</h1>
+        {% if user_email %}
+        <div class="logout-container">
+            <p>Bienvenue, {{ user_email }} </p>
+            <a href="{{ url_for('logout') }}" class="logout-button" title="Se déconnecter">
+                <i class="fas fa-sign-out-alt"></i>
+            </a>
+        </div>
+        {% endif %}
+        
+
+        <form action="/predict" method="post" enctype="multipart/form-data">
+            <input type="file" name="image" accept="image/*" required>
+            <button type="submit">Analyser l'Image</button>
+        </form>
+
+        {% if result_image %}
+        <div class="result">
+            <h2>Résultats :</h2>
+            <ul>
+                {% for prediction in predictions %}
+                <li>{{ prediction }}</li>
+                {% endfor %}
+            </ul>
+            <img src="{{ result_image }}" alt="Image annotée" style="max-width: 100%; height: auto;">
+        </div>
+
+        {% if show_satisfaction %}
+        <div class="satisfaction">
+            <h3>Êtes-vous satisfait des résultats ?</h3>
+            <form action="/satisfaction" method="post">
+                <button type="submit" name="satisfaction" value="satisfait">Bien Classifié</button>
+                <button type="submit" name="satisfaction" value="non_satisfait">Mal Classifié</button>
+            </form>
+        </div>
+        {% endif %}
+        {% endif %}
+    </div>
+</body>
+</html>

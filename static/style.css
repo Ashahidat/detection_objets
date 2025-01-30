@@ -1,0 +1,181 @@
+/* Style général */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f8ff; /* Bleu clair apaisant */
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Conteneur principal */
+.container {
+    width: 80%;
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: #ffffff; /* Fond blanc pour contraste */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 1px solid #ddd; /* Bord fin */
+}
+
+/* Titre principal */
+h1 {
+    text-align: center;
+    color: #2c3e50; /* Bleu foncé élégant */
+    font-size: 2.2em;
+    margin-bottom: 20px;
+}
+
+/* Texte de bienvenue */
+.container p {
+    text-align: center;
+    font-size: 1.1em;
+    color: #555;
+}
+
+/* Boutons */
+button {
+    background-color: #3498db; /* Bleu vif */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #2980b9; /* Bleu plus foncé */
+    transform: scale(1.05); /* Légère mise en avant */
+}
+
+/* Formulaire */
+form {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+input[type="file"] {
+    margin-bottom: 15px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+/* Résultats */
+.result {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.result h2 {
+    color: #27ae60; /* Vert pour indiquer succès */
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.result ul {
+    list-style-type: none;
+    padding: 0;
+    color: #555;
+    font-size: 1.1em;
+}
+
+.result li {
+    margin-bottom: 8px;
+    background-color: #ecf0f1; /* Fond gris clair */
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+/* Image annotée */
+.result img {
+    margin-top: 20px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Section satisfaction */
+.satisfaction {
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f9f9f9; /* Fond doux */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.satisfaction h3 {
+    color: #e67e22; /* Orange doux */
+    font-size: 1.3em;
+    margin-bottom: 15px;
+}
+
+.satisfaction button {
+    margin: 5px;
+    background-color: #e74c3c; /* Rouge pour contraste */
+}
+
+.satisfaction button:hover {
+    background-color: #c0392b; /* Rouge plus sombre */
+}
+
+/* Liens */
+a {
+    text-decoration: none;
+    color: #3498db;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+/* Conteneur de déconnexion */
+.logout-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.logout-container p {
+    margin: 0;
+    font-size: 1.1em;
+    color: #555;
+}
+
+/* Bouton déconnexion (icône) */
+.logout-button {
+    color: #e74c3c; /* Rouge pour attirer l'attention */
+    font-size: 1.5em; /* Taille de l'icône */
+    text-decoration: none;
+    transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.logout-button:hover {
+    color: #c0392b; /* Rouge plus sombre au survol */
+    transform: scale(1.2); /* Légère mise en avant */
+}
+/* Style pour le texte de bienvenue */
+.logout-container p {
+    font-size: 1.2em; /* Taille légèrement plus grande */
+    font-weight: bold; /* Texte en gras */
+    color: #2c3e50; /* Couleur bleu-gris */
+    margin: 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Légère ombre pour du relief */
+}
+
+/* Ajout d'icônes ou d'éléments décoratifs (facultatif) */
+.logout-container p::before {
+    content: "👋 "; /* Petite icône avant le texte */
+    font-size: 1.2em; /* Taille similaire au texte */
+    margin-right: 5px;
+    color: #27ae60; /* Vert pour une touche chaleureuse */
+}
+
+
